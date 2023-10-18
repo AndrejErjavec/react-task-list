@@ -1,0 +1,27 @@
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(168, 168, 168);
+  padding: 5px 15px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.task svg {
+  cursor: pointer;
+}
+
+.task svg:hover {
+  color: #dc4c3e;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+}
+
+.left div {
+  margin-left: 10px;
+}

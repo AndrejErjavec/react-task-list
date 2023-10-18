@@ -1,0 +1,13 @@
+.header {
+  color: #fff;
+  background-color: #dc4c3e;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-switch {
+  cursor: pointer;
+}
