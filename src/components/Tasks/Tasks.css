@@ -1,5 +1,5 @@
 .main {
-
+  height: calc(100vh - 58px);
 }
 
 .task-list {
@@ -15,9 +15,16 @@
 }
 
 .input {
+  font-size: 16px;
   padding: 7px;
-  border: 1px solid rgb(168, 168, 168);
-  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid rgb(168, 168, 168);
+  
+}
+
+.input:focus {
+  outline: none !important;
+  border-bottom: 2px solid rgb(168, 168, 168);
 }
 
 .form {
@@ -26,6 +33,8 @@
 }
 
 .gumb {
+  font-size: 16px;
+  font-weight: 600;
   background-color: #dc4c3e;
   color: #fff;
   border: none;

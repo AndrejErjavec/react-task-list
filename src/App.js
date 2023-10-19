@@ -1,16 +1,22 @@
 import Header from './components/Header/Header'
 import Tasks from './components/Tasks/Tasks'
-import Flex from './components/Flex/Flex'
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import './index.css';
+import {ThemeContext} from './context/themeContext';
 
 function App() {
 
+  const {theme} = useContext(ThemeContext);
+
+  useEffect(() => {
+    console.log(theme)
+  }, []);
+
   return (
-    <main>
+    <main id={theme}>
       <Header></Header>
       <div className="container">
         <Tasks></Tasks>
-        {/* <Flex></Flex> */}
       </div>
     </main>
   );

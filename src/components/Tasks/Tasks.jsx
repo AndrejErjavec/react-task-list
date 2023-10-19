@@ -51,7 +51,7 @@ function Tasks() {
   function deleteTask(id) {
     setTasks(() => {
       return tasks.filter((task) => {
-        return task.id != id;
+        return task.id !== id;
       })
     })
   }
@@ -65,11 +65,9 @@ function Tasks() {
     <main className="main">
       <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Task name</label>
-          <input type="text" className="input" name="name" value={taskName} onChange={changeTaskName}></input>
+          <input type="text" className="input" name="name" placeholder="What do you want to do today?" value={taskName} onChange={changeTaskName}></input>
         </div>
         <div className="form-group">
-          <label htmlFor="dueDate">Due Date</label>
           <input type="date" className="input" name="dueDate" value={dueDate} onChange={changeDueDate}></input>
         </div>
 

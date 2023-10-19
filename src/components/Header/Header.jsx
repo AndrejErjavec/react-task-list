@@ -1,15 +1,11 @@
-import {React, useState, useEffect} from 'react';
-import {useLocalStorage }from '../../hooks/useLocalStorage'
+import {React, useState, useEffect, useContext} from 'react';
 import {FaSun, FaMoon} from 'react-icons/fa6';
 import './Header.css';
+import {ThemeContext} from '../../context/themeContext';
 
 function Header() {
 
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
-
-  useEffect(() => {
-    console.log(theme);
-  }, [theme])
+  const {theme, setTheme} = useContext(ThemeContext);
 
   /** const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -17,14 +13,15 @@ function Header() {
   }); **/
 
   function switchTheme() {
-    setTheme(currentTheme => currentTheme === "light" ? "dark" : "light");
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
   }
 
   return (
     <header className="header">
       <h1>Task manager</h1>
       <div className="theme-switch" onClick={switchTheme}>
-        {theme === "light" ? <FaSun></FaSun> : <FaMoon></FaMoon>}
+        {theme === "light" ? <FaMoon></FaMoon> : <FaSun></FaSun>}
       </div>
     </header>
   )

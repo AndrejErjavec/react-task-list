@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Rubik&display=swap');
 
+:root {
+  --bg-dark: #292929;
+  --text-dark: #fff;
+  --bg-light: #fff;
+  --text-light: black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,3 +24,12 @@ body {
   justify-content: center;
 }
 
+#light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+#dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
