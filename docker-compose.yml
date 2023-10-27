@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    container_name: task-list-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: brankoking
+      POSTGRES_PASSWORD: burek
+      POSTGRES_DB: task-list-postgres
+    ports:
+      - '5432:5432'
+    volumes: ['/var/lib/postgresql/data']
+
+volumes:
+  dbdata:
