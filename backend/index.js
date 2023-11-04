@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import {router as authRouter} from './routes/auth.js';
 // naloži spremenljivke iz dataoteke .env v globalno spremenljivko process.env
 dotenv.config();
 
@@ -15,20 +16,8 @@ const port = 5000;
  * DELETE - izbriši podatke (delete)
 */
 
-app.get('/person', (req, res) => {
-  console.log(req.query);
-  const gender = req.query.gender;
-  const age = req.query.age;
-  res.send(`You requested gender ${gender} with age ${age}`);
-})
-
-app.get('/hello', (req, res) => {
-  res.send("hello");
-})
-
-app.get('/burek', (req, res) => {
-  res.send('<h1>burek</h1>')
-})
+// routers
+app.use('/auth', authRouter);
 
 app.listen(port, (err, res) => {
   if (err) console.log(err);
