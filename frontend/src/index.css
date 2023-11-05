@@ -33,8 +33,3 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-dark);
 }
-
-#dark .input {
-  color: #fff;
-  background-color: #292929;
-}

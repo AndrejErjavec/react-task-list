@@ -1,6 +1,5 @@
 .main {
   height: calc(100vh - 58px);
-  width: 80%;
 }
 
 .task-list {
@@ -20,6 +19,7 @@
   padding: 7px;
   border: none;
   border-bottom: 1px solid rgb(168, 168, 168);
+  
 }
 
 .input:focus {
@@ -30,7 +30,6 @@
 .form {
   display: flex;
   padding-top: 20px;
-  align-items: center;
 }
 
 .gumb {
@@ -40,7 +39,7 @@
   color: #fff;
   border: none;
   border-radius: 7px;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .gumb:hover {

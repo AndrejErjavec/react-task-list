@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import {router as authRouter} from './routes/auth.js';
+import authRouter from './routes/auth.js';
 // naloži spremenljivke iz dataoteke .env v globalno spremenljivko process.env
 dotenv.config();
 
